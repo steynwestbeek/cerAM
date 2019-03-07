@@ -12,8 +12,8 @@ title: 'My Final College Paper'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  thesisdown::thesis_pdf: default
-#  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_pdf: default
+  thesisdown::thesis_gitbook: default
   # pandoc_args: ["--lua-filter", "tikz.lua"]
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
@@ -41,9 +41,6 @@ lof: true
 #space_between_paragraphs: true
 # Delete the # at the beginning of the previous line if you'd like
 # to have a blank new line between each paragraph
-header-includes:
-- \usepackage{tikz}
-- \usetikzlibrary{shapes.geometric,arrows}
 ---
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
