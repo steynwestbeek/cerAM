@@ -28,7 +28,7 @@ plt.show()
 
 ## Including TikZ Plots
 
-```{r, echo=FALSE, engine='tikz', dpi=300, out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='Some caption.'}
+```{r, echo=FALSE, engine='tikz', dpi=300, out.width='\\textwidth', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='Some caption.'}
 \begin{tikzpicture}[scale=.7]
 \draw [fill=gray!30,very thick] (0,-1) rectangle (5,1);
 \draw [very thick] (5, 0) -- (13,0);
