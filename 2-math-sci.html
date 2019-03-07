@@ -154,7 +154,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
-<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a><ul>
+<li class="chapter" data-level="B.1" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html#including-python-plots"><i class="fa fa-check"></i><b>B.1</b> Including Python Plots</a></li>
+<li class="chapter" data-level="B.2" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html#including-tikz-plots"><i class="fa fa-check"></i><b>B.2</b> Including TikZ Plots</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -188,59 +191,43 @@ MathJax.Hub.Config({
 <p> is the best way to typeset mathematics. Donald Knuth designed  when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics. One nice feature of <em>R Markdown</em> is its ability to read LaTeX code directly.</p>
 <p>If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you’re not going to use math, skip over or delete this next commented section.</p>
 <!-- MATH and PHYSICS majors: Uncomment the following section -->
-<!--
-$$\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
+<p><span class="math display">\[\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
 \left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2
-$$
-
-From Informational Dynamics, we have the following (Dave Braden):
-
-After _n_ such encounters the posterior density for $\theta$ is
-
-$$
-\pi(\theta|X_1< y_1,\dots,X_n<y_n) \varpropto \pi(\theta) \prod_{i=1}^n\int_{-\infty}^{y_i}
+\]</span></p>
+<p>From Informational Dynamics, we have the following (Dave Braden):</p>
+<p>After <em>n</em> such encounters the posterior density for <span class="math inline">\(\theta\)</span> is</p>
+<p><span class="math display">\[
+\pi(\theta|X_1&lt; y_1,\dots,X_n&lt;y_n) \varpropto \pi(\theta) \prod_{i=1}^n\int_{-\infty}^{y_i}
    \exp\left(-{(x-\theta)^2\over{2\sigma^2}}\right)\ dx
-$$
-
-Another equation:
-
-$$\det\left|\,\begin{matrix}%
-c_0&c_1\hfill&c_2\hfill&\ldots&c_n\hfill\cr
-c_1&c_2\hfill&c_3\hfill&\ldots&c_{n+1}\hfill\cr
-c_2&c_3\hfill&c_4\hfill&\ldots&c_{n+2}\hfill\cr
-\,\vdots\hfill&\,\vdots\hfill&
-  \,\vdots\hfill&&\,\vdots\hfill\cr
-c_n&c_{n+1}\hfill&c_{n+2}\hfill&\ldots&c_{2n}\hfill\cr
-\end{matrix}\right|>0$$
-
-
-Lapidus and Pindar, Numerical Solution of Partial Differential Equations in Science and
-Engineering.  Page 54
-
-$$
+\]</span></p>
+<p>Another equation:</p>
+<p><span class="math display">\[\det\left|\,\begin{matrix}%
+c_0&amp;c_1\hfill&amp;c_2\hfill&amp;\ldots&amp;c_n\hfill\cr
+c_1&amp;c_2\hfill&amp;c_3\hfill&amp;\ldots&amp;c_{n+1}\hfill\cr
+c_2&amp;c_3\hfill&amp;c_4\hfill&amp;\ldots&amp;c_{n+2}\hfill\cr
+\,\vdots\hfill&amp;\,\vdots\hfill&amp;
+  \,\vdots\hfill&amp;&amp;\,\vdots\hfill\cr
+c_n&amp;c_{n+1}\hfill&amp;c_{n+2}\hfill&amp;\ldots&amp;c_{2n}\hfill\cr
+\end{matrix}\right|&gt;0\]</span></p>
+<p>Lapidus and Pindar, Numerical Solution of Partial Differential Equations in Science and
+Engineering. Page 54</p>
+<p><span class="math display">\[
 \int_t\left\{\sum_{j=1}^3 T_j \left({d\phi_j\over dt}+k\phi_j\right)-kT_e\right\}w_i(t)\ dt=0,
    \qquad\quad i=1,2,3.
-$$
-
-L\&P  Galerkin method weighting functions.  Page 55
-
-$$
+\]</span></p>
+<p>L&amp;P Galerkin method weighting functions. Page 55</p>
+<p><span class="math display">\[
 \sum_{j=1}^3 T_j\int_0^1\left\{{d\phi_j\over dt} + k\phi_j\right\} \phi_i\ dt
-   = \int_{0}^1k\,T_e\phi_idt, \qquad i=1,2,3 $$
-
-Another L\&P (p145)
-
-$$
+   = \int_{0}^1k\,T_e\phi_idt, \qquad i=1,2,3 \]</span></p>
+<p>Another L&amp;P (p145)</p>
+<p><span class="math display">\[
 \int_{-1}^1\!\int_{-1}^1\!\int_{-1}^1 f\big(\xi,\eta,\zeta\big)
    = \sum_{k=1}^n\sum_{j=1}^n\sum_{i=1}^n w_i w_j w_k f\big( \xi,\eta,\zeta\big).
-$$
-
-Another L\&P (p126)
-
-$$
+\]</span></p>
+<p>Another L&amp;P (p126)</p>
+<p><span class="math display">\[
 \int_{A_e} (\,\cdot\,) dx dy = \int_{-1}^1\!\int_{-1}^1 (\,\cdot\,) \det[J] d\xi d\eta.
-$$
--->
+\]</span></p>
 </div>
 <div id="chemistry-101-symbols" class="section level2">
 <h2><span class="header-section-number">2.2</span> Chemistry 101: Symbols</h2>
@@ -325,7 +312,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"]],
 "toc": {
 "collapse": "section"
 }
