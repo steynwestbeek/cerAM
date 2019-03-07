@@ -1,0 +1,41 @@
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Including Python Plots
+
+```{python, echo=FALSE}
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2 * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(t, s)
+
+ax.set(xlabel='time (s)', ylabel='voltage (mV)',
+       title='About as simple as it gets, folks')
+ax.grid()
+
+plt.show()
+```
+
+## Including TikZ Plots
+
+```{r, echo=FALSE, engine='tikz', dpi=300, out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='Some caption.'}
+\begin{tikzpicture}[scale=.7]
+\draw [fill=gray!30,very thick] (0,-1) rectangle (5,1);
+\draw [very thick] (5, 0) -- (13,0);
+\node [below] at (2,-1) {\large Hello};
+\node [below, align=center] at (0,-1) {\large Two\\ lines};
+\end{tikzpicture}
+```
+
+
+
